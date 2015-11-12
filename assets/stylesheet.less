@@ -1,0 +1,69 @@
+@jumbotronBackgroundImage: 'http://placehold.it/1200x300';
+@semiTransparent: rgba(0, 0, 0, 0.5);
+html, body {
+	position: relative;
+}
+#jumbotronContainer {
+	background-image: url(@jumbotronBackgroundImage);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.jumbotron {
+		background-color: @semiTransparent;
+		box-shadow: 0 0 10px 5px @semiTransparent inset;
+		margin-bottom: 0;
+		.mixin-headers-white;
+	}
+}
+#navTop {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	.glyphicon {
+		margin-right: 5px;
+	}
+}
+#navMiddle {
+	border-radius: 0;
+	li {
+		.glyphicon {
+			margin-left: 5px;
+		}
+	}
+	.glyphicon {
+		transition-duration: 0.5s;
+		transition-property: transform;
+	}
+	.open .glyphicon, .navbar-toggle:not(.collapsed) .glyphicon {
+		transform: rotate(90deg);	
+	}	
+}
+#carouselHome img {
+	width: 100%;
+}
+#carouselHome {
+	.carousel-caption {
+		.mixin-headers-white;
+	}
+}
+@media (max-width: 992px) {
+	.jumbotron > .container-fluid {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 768px) {
+	.jumbotron > .container-fluid {
+		margin-top: 25px;
+	}
+	#navTop .btn-group:first-child {
+		display: none;
+	}
+	#carouselHome .carousel-caption {
+		display: none;
+	}
+}
+.mixin-headers-white {
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+	}
+}

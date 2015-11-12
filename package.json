@@ -1,0 +1,30 @@
+{
+  "name": "makaut",
+  "version": "1.0.0",
+  "description": "Website for MAKAUT. Framework: CodeIgniter",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "less": "^2.5.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "phplint": "^1.7.0",
+    "uglify-js": "^2.5.0"
+  },
+  "scripts": {
+    "build": "./node_modules/phplint/cli.js *.php application/*/*.php application/*/*/*.php && ./node_modules/less/bin/lessc --clean-css=\"--s0\" assets/stylesheet.less assets/stylesheet.min.css && ./node_modules/jshint/bin/jshint assets/script.js && ./node_modules/uglify-js/bin/uglifyjs -co assets/script.min.js -- assets/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitbhsk/makaut.git"
+  },
+  "keywords": [
+    "makaut"
+  ],
+  "author": "Bhaskar Tiwari",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/gitbhsk/makaut/issues"
+  },
+  "homepage": "https://github.com/gitbhsk/makaut#readme"
+}
